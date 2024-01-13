@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas</title>
+    <link rel="stylesheet" href="ofertas.css">
+</head>
+
+<body>
+    <!-- essa div armazena o input e o botão-->
+    <div class="caixaPesquisa">
+        <!-- placeholder: "informação final" sendo mostrada, no caso, quando abre o icon, aparece "pesquisar..." como informação final-->
+        <input type="texto" class="textoPesquisa" placeholder="Pesquisar...">
+        <!-- colocando o botão dentro da tag <a>-->
+        <!-- tag <a> recebe links-->
+        <a class="botaoPesquisa">
+            <img src="loupe-white.svg" alt="lupa" height="25px" width="25px">
+        </a>
+    </div>
+
+    <!--fundo p não ficar espaçamento-->
+    <header>
+        <div class="fundo">
+            <!--imagem calmAura-->
+            <img class="headerImagem" src="logo(calmAura).PNG" alt="marca">
+        </div>
+
+        <!-- agrupa uma lista de links p outras partes do site-->
+        <nav>
+            <ul>
+                <li><a href="início.html">INÍCIO</a></li>
+                <li><a href="sobrenós.html">SOBRE NÓS</a></li>
+                <li><a href="#">CATEGORIAS</a>
+                    <!--submenu para categoria-->
+                    <ul class="dropCategoria">
+                        <li><a href="#">Kits </a></li>
+                        <li><a href="#">Colchão</a></li>
+                        <li><a href="#">Travesseiro</a></li>
+                        <li><a href="#">Lençol</a></li>
+                        <li><a href="#">Fronha</a></li>
+                        <li><a href="#">Cobertor</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">NECESSIDADES</a>
+                    <!--submenu para necessidades-->
+                    <ul class="dropNecessidades">
+                        <li><a href="#">Coluna e Pescoço</a></li>
+                        <li><a href="#">Alergia</a></li>
+                        <li><a href="#">Insônia</a></li>
+                        <li><a href="#">Calor</a></li>
+                    </ul>
+                </li>
+                <li><a href="lançamentos.html">LANÇAMENTOS</a></li>
+                <li><a href="ofertas.html">OFERTAS</a></li>
+            </ul>
+        </nav>
+
+        <!-- icons no menu-->
+        <!--icons do lado esquerdo do menu-->
+        <div class="icons-esquerdo">
+            <a href="https://www.instagram.com/calmAuraOficial"> <img class="iconIG" src="instagram(calmAura).PNG"
+                    alt="iconIG"></a>
+            <a href="mailto:calmAura.loja@gmail.com"> <img class="iconGMAIL" src="gmail(calmAura).PNG"
+                    alt="iconGMAIL"></a>
+        </div>
+
+        <!--icons do lado direito do menu-->
+        <div class="icons-direito">
+            <a href="carrinho.html"> <img class="iconCarrinho" src="carrinho(calmAura).PNG" alt="iconcompra"></a>
+            <a href="conta.html"><img class="iconConta" src="conta(calmAura).PNG" alt="iconAcc"></a>
+        </div>
+    </header>
+
+    <!-- ofertas de produtos -->
+    <div>
+        <br>
+        <img class="ofertas" src="ofertas(calmAura).PNG" alt="escrita">
+    </div>
+
+    <!-- background para os produtos -->
+    <div>
+        <img class="fundoOfertas" src="backgroundOfertas(calmAura).PNG" alt="fundoOfertas">
+    </div>
+
+    <!--cardzinhos com os produtos em oferta-->
+    <div class="container">
+
+        <!--1-->
+        <a class="link" href="#">
+            <div class="card1">
+                <h4>EDREDOM BONS SONHOS</h4>
+                <img src="edredomBonsSonhos(calmAura).PNG" alt="edredom-bons-sonhos">
+                <p> <s>R$ 579,99</s></p>
+                <p><b>R$ 429,90</b></p>
+                <p>ou 10X de R$ 42,99</p>
+        </a>
+
+        <!--carrinho de compra-->
+        <div class="iconCarrinhoProduto1">
+            <a href="carrinho.html"> <img src="carrinhoProdutosPNG(calmAura).svg" alt="iconCarrinhoProduto1"> </a>
+        </div>
+    </div>
+
+    <!--2-->
+    <a class="link" href="#">
+        <div class="card2">
+            <h4>EDREDOM LÍRIO ROSA</h4>
+            <img src="edredomLirioRosa(calmAura).PNG" alt="edredom-lírio-rosa">
+            <p> <s>R$ 509,89</s></p>
+            <p><b>R$ 310,90</b></p>
+            <p>ou 10X de R$ 31,09</p>
+    </a>
+
+    <!--carrinho de compra-->
+    <div class="iconCarrinhoProduto2">
+        <a href="carrinho.html"> <img src="carrinhoProdutosPNG(calmAura).svg" alt="iconCarrinhoProduto2"></a>
+    </div>
+    </div>
+
+    <!--3-->
+    <a class="link" href="descriçao_colchaoEspuma.html">
+        <div class="card3">
+            <h4>COLCHÃO DE ESPUMA DORMINDO NO CEÚ</h4>
+            <img src="colchaoEspuma(calmAura).PNG" alt="colchao-espuma">
+            <p> <s>R$ 3.599,69</s></p>
+            <p> <b>R$ 512,89</b></p>
+            <p>ou 10X de R$ 281,22</p>
+    </a>
+
+    <!--carrinho de compra-->
+    <div class="iconCarrinhoProduto3">
+        <a href="carrinho.html"> <img src="carrinhoProdutosPNG(calmAura).svg" alt="iconCarrinhoProduto3"></a>
+    </div>
+    </div>
+
+    <!--4-->
+    <a class="link" href="#">
+        <div class="card4">
+            <h4>COLCHÃO ORTOPÉDICO PRÓ-SAÚDE</h4>
+            <img src="colchaoOrtopedico(calmAura).PNG" alt="colchao-ortopedico">
+            <p> <s>R$ 4.770,69</s></p>
+            <p> <b>R$ 3.450,80</b></p>
+            <p>ou 10X de R$ 345,08</p>
+            <br>
+    </a>
+
+    <!--carrinho de compra-->
+    <div class="iconCarrinhoProduto4">
+        <a href="carrinho.html"> <img src="carrinhoProdutosPNG(calmAura).svg" alt="iconCarrinhoProduto4"></a>
+    </div>
+    </div>
+
+    <!--5-->
+    <a class="link" href="#">
+        <div class="card5-kit">
+            <h4>JOGO DE COLCHA BOM DESCANSO</h4>
+            <img src="jogoDeColcha(calmAura).PNG" alt="jogo-de-colcha">
+            <br>
+            <p><s>R$ 467,87</s></p>
+            <p><b>R$ 312,29</b></p>
+            <p>ou 10X de R$ 31,22</p>
+    </a>
+
+    <!--carrinho de compra-->
+    <div class="iconCarrinhoProduto5">
+        <a href="carrinho.html"> <img src="carrinhoProdutosPNG(calmAura).svg" alt="iconCarrinhoProduto5"></a>
+    </div>
+    </div>
+
+    <!--mini cardzinhos do lado do respectivo kit-->
+    <div class="card5-container">
+        <div class="cardzinho">
+            <img src="conjuntoColcha-jogoColcha(calmAura).PNG" alt="1">
+        </div>
+        <div class="cardzinho">
+            <img src="colchaCama-jogoColcha(calmAura).PNG" alt="2">
+        </div>
+        <div class="cardzinho">
+            <img src="travesseiroColcha-jogoColcha(calmAura).PNG" alt="3">
+        </div>
+    </div>
+
+    <!--6-->
+    <a class="link" href="#">
+        <div class="card6">
+            <h4>COLCHÃO DE MOLA DIVERSÃO DE SONHAR </h4>
+            <img src="colchaoMola(calmAura).PNG" alt="colchão-mola">
+            <br>
+            <p><s>R$ 1.779,80</s></p>
+            <p> <b>R$ 1.429,99</b></p>
+            <p>ou 10X de R$ 142,99</p>
+    </a>
+
+    <!--carrinho de compra-->
+    <div class="iconCarrinhoProduto6">
+        <a href="carrinho.html"> <img src="carrinhoProdutosPNG(calmAura).svg" alt="iconCarrinhoProduto6"></a>
+    </div>
+    </div>
+
+    <!--7-->
+    <a class="link" href="descriçao_kitAconchego.html">
+        <div class="card7-kit">
+            <h4>KIT ACONCHEGO BOM
+                LENÇOL, COBERTA E FRONHA </h4>
+            <img src="kitAconchego(calmAura).PNG" alt="kit-aconchego">
+            <br>
+            <p><s>R$ 679,90</s></p>
+            <p><b>R$ 512,89</b></p>
+            <p>ou 10X de R$ 51,29</p>
+            <br>
+    </a>
+
+    <!--carrinho de compra-->
+    <div class="iconCarrinhoProduto7">
+        <a href="carrinho.html"> <img src="carrinhoProdutosPNG(calmAura).svg" alt="iconCarrinhoProduto7"></a>
+    </div>
+    </div>
+
+    <!--mini cardzinhos do lado do respectivo kit-->
+    <div class="card7-container">
+        <div class="cardzinho">
+            <img src="lençol-kitAconchego(calmAura).PNG" alt="lençol">
+        </div>
+        <div class="cardzinho">
+            <img src="cobertor-kitAconchego(calmAura).PNG" alt="cobertor">
+        </div>
+        <div class="cardzinho">
+            <img src="fronha-kitAconchego(calmAura).PNG" alt="fronha">
+        </div>
+    </div>
+    </div>
+
+    <!--espaçamento-->
+    <br><br>
+
+    <!--carrossel-->
+    <div class="slider">
+        <div class="slides">
+            <!--radio buttons (os botões)-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+            <!--imagem das propagandas-->
+            <div class="slide first">
+                <img src="propagandaCartao.PNG" alt="imagem1">
+            </div>
+            <div class="slide">
+                <img src="propagandaNatal.PNG" alt="imagem2">
+            </div>
+            <div class="slide">
+                <img src="propagandaFrete.PNG" alt="imagem3">
+            </div>
+
+            <!--navegaçao automatica-->
+            <div class="navegacaoAuto">
+                <div class="auto-botao1"></div>
+                <div class="auto-botao2"></div>
+                <div class="auto-botao3"></div>
+            </div>
+        </div>
+
+        <!-- labels -->
+        <div class="navegacaoManual">
+            <label for="radio1" class="manual-botao"></label>
+            <label for="radio2" class="manual-botao"></label>
+            <label for="radio3" class="manual-botao"></label>
+        </div>
+    </div>
+
+    <!--espaçamento-->
+    <br><br><br><br><br><br>
+
+    <!--botao de retornar pra pagina inicial-->
+    <div class="retornar">
+        <a href="início.html"> <img src="botaoRetornar(calmAura).PNG" alt="retornar"></a>
+        <p class="returnEscrita">return</p>
+    </div>
+
+    <!--espaçamento-->
+    <br><br><br><br><br><br>
+
+    <center>
+        <!--rodapé do site-->
+        <footer class="rodape">
+            <p class="endereco">RUA XV DE NOVEMBRO, 313| Telefone: 0000-0000 </p>
+
+            <p class="empresa">calmAura LTDA | CNPJ: XX.XXX.XXX/XXXX-XX</p>
+            <br>
+            <p class="rodapeVERSAO"> Versão 2.28.56 | Termos de uso </p>
+            <a href="" target="blank">
+                <p class="rodapeTERMOS">Termos e políticas de calmAura</p>
+            </a>
+
+        </footer>
+    </center>
+
+    <!--javascript "linkado"-->
+    <script src="script.js"></script>
+</body>
+
+</html>

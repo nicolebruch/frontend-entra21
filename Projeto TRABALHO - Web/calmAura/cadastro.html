@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+    <!-- essa div armazena o input e o botão-->
+    <div class="caixaPesquisa">
+        <!-- placeholder: "informação final" sendo mostrada, no caso, quando abre o icon, aparece "pesquisar..." como informação final-->
+        <input type="texto" class="textoPesquisa" placeholder="Pesquisar...">
+        <!-- colocando o botão dentro da tag <a>-->
+        <!-- tag <a> recebe links-->
+        <a class="botaoPesquisa">
+            <img src="loupe-white.svg" alt="lupa" height="25px" width="25px">
+        </a>
+    </div>
+
+    <!--fundo p não ficar espaçamento-->
+    <header>
+        <div class="fundo">
+            <!--imagem calmAura-->
+            <img class="headerImagem" src="logo(calmAura).PNG" alt="marca">
+        </div>
+
+        <!-- agrupa uma lista de links p outras partes do site-->
+        <nav>
+            <ul>
+                <li><a href="início.html">INÍCIO</a></li>
+                <li><a href="sobrenós.html">SOBRE NÓS</a></li>
+                <li><a href="#">CATEGORIAS</a>
+                    <!--submenu para categoria-->
+                    <ul class="dropCategoria">
+                        <li><a href="#">Kits </a></li>
+                        <li><a href="#">Colchão</a></li>
+                        <li><a href="#">Travesseiro</a></li>
+                        <li><a href="#">Lençol</a></li>
+                        <li><a href="#">Fronha</a></li>
+                        <li><a href="#">Cobertor</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">NECESSIDADES</a>
+                    <!--submenu para necessidades-->
+                    <ul class="dropNecessidades">
+                        <li><a href="#">Coluna e Pescoço</a></li>
+                        <li><a href="#">Alergia</a></li>
+                        <li><a href="#">Insônia</a></li>
+                        <li><a href="#">Calor</a></li>
+                    </ul>
+                </li>
+                <li><a href="lançamentos.html">LANÇAMENTOS</a></li>
+                <li><a href="ofertas.html">OFERTAS</a></li>
+            </ul>
+        </nav>
+
+        <!-- icons no menu-->
+        <!--icons do lado esquerdo do menu-->
+        <div class="icons-esquerdo">
+            <a href="https://www.instagram.com/calmAuraOficial"> <img class="iconIG" src="instagram(calmAura).PNG"
+                    alt="iconIG"></a>
+            <a href="mailto:calmAura.loja@gmail.com"> <img class="iconGMAIL" src="gmail(calmAura).PNG"
+                    alt="iconGMAIL"></a>
+        </div>
+
+        <!--icons do lado direito do menu-->
+        <div class="icons-direito">
+            <a href="carrinho.html"> <img class="iconCarrinho" src="carrinho(calmAura).PNG" alt="iconcompra"></a>
+            <a href="conta.html"><img class="iconConta" src="conta(calmAura).PNG" alt="iconAcc"></a>
+        </div>
+    </header>
+
+    <!--espaçamento-->
+    <br>
+
+    <!--o "quadrado" do cadastro-->
+    <div class="container">
+        <div class="fundoQuadrado">
+        </div>
+        <div class="quadrado">
+
+            <!--"titulo" escrito cadastro-->
+            <div class="bordaCadastro">
+                <p class="cadastro">CADASTRO</p>
+            </div>
+
+            <!--enfeite-->
+            <p class="traço-esquerdo"></p>
+            <p class="traço-direito"></p>
+
+            <!--setinhas-->
+            <div class="iconeSeta">
+                <img src="setaLogin(calmAura).png" alt="seta1">
+                <img src="setaLogin(calmAura).png" alt="seta2">
+                <img src="setaLogin(calmAura).png" alt="seta3">
+                <img src="setaLogin(calmAura).png" alt="seta4">
+                <img src="setaLogin(calmAura).png" alt="seta5">
+                <img src="setaLogin(calmAura).png" alt="seta6">
+                <img src="setaLogin(calmAura).png" alt="seta7">
+
+                <!--icon da pessoa que fica em baixo das informações de cadastro-->
+                <div class="iconPessoa">
+                    <img src="iconPessoa(calmAura).png" alt="iconPessoa">
+                </div>
+            </div>
+
+            <!--nome completo-->
+            <div class="inputNomeCompleto">
+                <!-- placeholder: "informação final" sendo mostrada, no caso, aparece "Informe seu nome completo" como informação final-->
+                <input type="text" class="nomeCompleto" placeholder="Informe seu nome completo">
+            </div>
+
+            <!--data de nascimento-->
+            <div class="bordaDataNascimento">
+                <p class="dataDeNascimento">Data de nascimento</p>
+                <p class="nascimentoDoisPontos">:</p>
+                <div class="nascimento-container">
+                    <!--cada balaozinho é um input, e não apenas um input direto-->
+                    <input type="number" class="dia">
+                    <input type="number" class="mes">
+                    <input type="number" class="ano">
+                </div>
+                <!--divisória da data de nascimento-->
+                <div class="container-barras">
+                    <p class="barra">/</p>
+                    <p class="barra">/</p>
+                </div>
+            </div>
+
+            <!--CPF-->
+            <div class="bordaCPF">
+                <p class="CPF">CPF</p>
+                <p class="CPFdoisPontos">:</p>
+                <!--cada balaozinho é um input, não apenas um input direto-->
+                <div class="CPF-container">
+                    <input type="number" class="cpf">
+                    <input type="number" class="cpf">
+                    <input type="number" class="cpf">
+                    <!--o último muda a nomenclatura pq só é aceito 2 digitos, entao ele possui uma função única no js-->
+                    <input type="number" class="cpfFinal">
+                </div>
+                <!--divisória do CPF-->
+                <div class="container-pontos">
+                    <p class="pontos">.</p>
+                    <p class="pontos">.</p>
+                    <p class="traço">-</p>
+                </div>
+            </div>
+
+            <!--inputs-->
+            <div class="container-inputs">
+                <!--input do email-->
+                <input type="texto" class="email" placeholder="Informe seu email">
+            </div>
+
+            <div class="container-inputs">
+                <!--input de confirmar o email-->
+                <input type="texto" class="confirmarEmail" placeholder="Confirme seu email">
+            </div>
+
+            <div class="container-inputs">
+                <!--input da senha-->
+                <input type="texto" class="senha" placeholder="Crie uma senha">
+            </div>
+
+            <div class="container-inputs">
+                <!--input de confirmar a senha-->
+                <input type="texto" class="confirmarSenha" placeholder="Confirme sua senha">
+            </div>
+
+            <!--botao pra confirmar o cadastro-->
+            <a href="#" class="container-botaoConfirmar">
+                <div class="botaoFundoConfirmar"></div>
+                <div class="botaoConfirmar">
+                    <p class="confirmar">CONFIRMAR</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!--espaçamento-->
+    <br><br><br>
+
+    <center>
+        <!--rodapé do site-->
+        <footer class="rodape">
+            <p class="endereco">RUA XV DE NOVEMBRO, 313| Telefone: 0000-0000 </p>
+
+            <p class="empresa">calmAura LTDA | CNPJ: XX.XXX.XXX/XXXX-XX</p>
+            <br>
+            <p class="rodapeVERSAO"> Versão 2.28.56 | Termos de uso </p>
+            <a href="" target="blank">
+                <p class="rodapeTERMOS">Termos e políticas de calmAura</p>
+            </a>
+
+        </footer>
+    </center>
+
+    <!--javascript "linkado"-->
+    <script src="cadastro.js"></script>
+
+</body>
+
+</html>

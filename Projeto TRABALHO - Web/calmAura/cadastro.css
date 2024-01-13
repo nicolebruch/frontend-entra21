@@ -1,0 +1,528 @@
+* {
+    /* por padrao no html vem com preenchimentop e margem própria, então zeramos*/
+    /* padding fica perto do conteúdo que estamos add na nossa página*/
+    padding: 0;
+    /* margem dos 4 cantos */
+    margin: 0;
+}
+
+body {
+    background-color: rgb(232, 237, 241);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.caixaPesquisa {
+    /*position absolute faz com que o elemento possa estar em qualquer lugar da tela*/
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 50px;
+    /*permite um fácil alinhamento dos elementos*/
+    display: flex;
+    /*to justificando que tem que ficar os elementos totalmente p esquerda de um lado e totalmente na direita do outro lado, "espaçamento entre os elementos"*/
+    justify-content: space-between;
+    /*alinho todos os elementos no centro da minha caixa branca de pesquisa*/
+    align-items: center;
+}
+
+.textoPesquisa {
+    /*tiro linha, borda e fundo que vem por padrão no html*/
+    background: none;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    padding-left: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 320px;
+}
+
+.botaoPesquisa {
+    /*deixou redondinho o botão, pois tava achatado*/
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(40, 81, 104, 0.829);
+    /*deixei o icon da lupa bem centralizado no meio do fundo branco arredondado*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*fundo em baixo da imagem da calmAura pra não ficar espaçado entre o menu e a imagem calmAura*/
+.fundo {
+    background-color: rgba(106, 173, 175, 0.582);
+}
+
+/*imagem da calmAura que eu tentei fazer responsiva*/
+.headerImagem {
+    width: 100%;
+    /*tá trocando o tamanho da altura de forma proporcional*/
+    /*única parte do site que trabalha com responsividade*/
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+/*menu todo*/
+nav {
+    /*coloca a mesma fonte de escrita desde o menu até o submenu*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*estiliza as opcoes do menu*/
+ul {
+    /*a coluna do menu*/
+    background-color: rgba(106, 173, 175, 0.582);
+    /*opcoes alinhadas na coluna do menu*/
+    text-align: center;
+}
+
+/*vai estilizar do meu menu até o submenu*/
+ul li {
+    /*pra não ficar as opções do menu um em baixo do outro e sim um do lado do outro*/
+    display: inline-block;
+    /*pro meu submenu ocupar só o espaço da opção, e não de todas as opções*/
+    /*opcao==categoria, o submenu deve respeitar o espaço da categoria*/
+    position: relative;
+}
+
+/*estiliza o menu e o submenu*/
+ul li a {
+    /*cada opcao vai ocupar toda a largura disponível da coluna*/
+    display: block;
+    padding: 25px 25px;
+    color: rgb(40, 81, 104);
+    /*pra nao ficar com o traco do link por ser tag <a>*/
+    text-decoration: none;
+    font-size: 35px;
+}
+
+/*estilizando o submenu com as linhas divisórias de cada opção*/
+ul li ul.dropCategoria li,
+ul li ul.dropNecessidades li {
+    display: block;
+    border-top: 1px solid rgba(31, 81, 105, 0.856);
+}
+
+/*estilo pros submenus*/
+ul li ul.dropCategoria,
+ul li ul.dropNecessidades {
+    width: 100%;
+    background-color: rgba(186, 219, 219, 0.897);
+    position: absolute;
+    /*z-index pra conseguir olhar as opcoes inteiras do submenu, pois a posiçao dele fica acima de todos os elementos da página*/
+    z-index: 999;
+    display: none;
+}
+
+/*quando o mouse passa as letrinhas ficam mais clarinhas e o cursor */
+ul li a:hover {
+    color: rgba(40, 81, 104, 0.692);
+    cursor: pointer;
+}
+
+/*mostra os submenus quando o mouse passa sobre os itens de lista pai (categoria e necessidades) */
+ul li:hover ul.dropCategoria,
+ul li:hover ul.dropNecessidades {
+    display: block;
+}
+
+/*icons no menu*/
+/*muda a posicao dos icons do lado esquerdo*/
+.icons-esquerdo {
+    position: absolute;
+    margin-top: -4.2%;
+    left: 3.5%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/*muda a posicao dos icons do lado direito*/
+.icons-direito {
+    position: absolute;
+    margin-top: -4.2%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/*ajusta o tamanho deles e o formato p ficar bem redondinho*/
+.iconIG,
+.iconGMAIL,
+.iconCarrinho,
+.iconConta {
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+}
+
+/*quando passa o mouse o cursor muda e fica mais escuro o icon*/
+.iconIG:hover,
+.iconGMAIL:hover,
+.iconCarrinho:hover,
+.iconConta:hover {
+    filter: brightness(0.5);
+    cursor: pointer;
+}
+
+/*"container" onde eu posiciono o meu quadrado e o fundo do meu quadrado*/
+.container {
+    margin-top: 30px;
+    margin-left: 25%;
+}
+
+.quadrado {
+    position: relative;
+    width: 1000px;
+    height: 1030px;
+    z-index: 2;
+    background-color: rgba(203, 214, 236, 0.671);
+}
+
+.fundoQuadrado {
+    position: absolute;
+    margin-left: -5px;
+    margin-top: -3px;
+    width: 1020px;
+    height: 1040px;
+    z-index: 1;
+    background-color: rgba(128, 128, 128, 0.692);
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.5);
+}
+
+/*titulo do cadastro*/
+.bordaCadastro {
+    position: relative;
+    background-color: rgba(117, 124, 141, 0.349);
+    height: 50px;
+    width: 400px;
+    top: 40px;
+    margin-left: 28%;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.cadastro {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(26, 39, 63);
+    font-size: 60px;
+    margin-top: -10px;
+}
+
+/*tracinhos de cada lado como enfeite*/
+.traço-esquerdo {
+    float: left;
+    margin-left: 15px;
+    border: 1px solid rgba(117, 124, 141, 0.692);
+    width: 25%;
+}
+
+.traço-direito {
+    float: right;
+    margin-right: 15px;
+    border: 1px solid rgba(117, 124, 141, 0.692);
+    width: 25%;
+}
+
+/*as 7 setinhas posicionadas*/
+.iconeSeta {
+    margin-top: 10%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    height: 50px;
+    width: 50px;
+}
+
+/*enfeita o input, mexendo no exterior*/
+.inputNomeCompleto {
+    background-color: whitesmoke;
+    height: 50px;
+    width: 750px;
+    margin-left: 12%;
+    margin-top: -70px;
+    margin-bottom: 105px;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+}
+
+/*enfeita o input, mexendo no interior*/
+.nomeCompleto {
+    /*tiro linha, borda e fundo que vem por padrão no html*/
+    background: none;
+    border: 0;
+    outline: 0;
+    font-size: 25px;
+    padding-left: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 90%;
+    margin-top: 10px;
+}
+
+/*titulo do nascimento*/
+.bordaDataNascimento {
+    position: relative;
+    background-color: rgba(117, 124, 141, 0.349);
+    height: 30px;
+    width: 350px;
+    margin-left: 12%;
+    padding: 15px;
+    top: -70px;
+    border-radius: 50px;
+}
+
+.dataDeNascimento {
+    text-align: center;
+    font-size: 35px;
+    margin-top: -10px;
+    color: rgb(26, 39, 63);
+}
+
+.nascimentoDoisPontos {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -45px;
+    margin-left: 107%;
+    color: rgb(26, 39, 63);
+}
+
+/*mexe na posicao de todos os 3 balaozinhos de nascimento*/
+.nascimento-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: -50px;
+    margin-left: 400px;
+}
+
+/*mexe no interior dos balaozinhos de nascimento*/
+.dia,
+.mes,
+.ano {
+    border: 0;
+    outline: 0;
+    background-color: whitesmoke;
+    height: 20px;
+    width: 80px;
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    font-size: 35px;
+    text-align: center;
+}
+
+/*remove a seta do input number*/
+.dia::-webkit-inner-spin-button,
+.mes::-webkit-inner-spin-button,
+.ano::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/*as divisorias da data de nascimento*/
+.container-barras {
+    display: flex;
+    gap: 135px;
+    margin-top: -70px;
+    margin-left: 525px;
+    font-size: 50px;
+    color: rgb(26, 39, 63);
+}
+
+/*titulo CPF*/
+.bordaCPF {
+    position: relative;
+    background-color: rgba(117, 124, 141, 0.349);
+    height: 30px;
+    width: 80px;
+    margin-left: 12%;
+    padding: 15px;
+    top: -35px;
+    border-radius: 50px;
+}
+
+.CPF {
+    text-align: center;
+    font-size: 35px;
+    margin-top: -10px;
+    color: rgb(26, 39, 63);
+
+}
+
+.CPFdoisPontos {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -45px;
+    margin-left: 125%;
+    color: rgb(26, 39, 63);
+}
+
+/*mexe na posicao de todos os 4 balaozinhos*/
+.CPF-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: -50px;
+    margin-left: 130px;
+}
+
+/*mexe no interior dos balaozinhos do CPF*/
+.cpf,
+.cpfFinal {
+    border: 0;
+    outline: 0;
+    background-color: whitesmoke;
+    height: 20px;
+    width: 80px;
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    font-size: 35px;
+    text-align: center;
+}
+
+/*remove a seta do input number*/
+.cpf::-webkit-inner-spin-button,
+.cpfFinal::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/*as divisorias do CPF, sendo pontos e a barra*/
+.container-pontos {
+    display: flex;
+    gap: 140px;
+    margin-top: -65px;
+    margin-left: 260px;
+    font-size: 50px;
+    color: rgb(26, 39, 63);
+}
+
+/*container onde enfeita o exterior dos inputs "email", "confirme email", "senha", "confirme senha"*/
+.container-inputs {
+    background-color: whitesmoke;
+    height: 50px;
+    width: 750px;
+    margin-left: 12%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+}
+
+/*enfeita o interior dos balaozao*/
+.email,
+.confirmarEmail,
+.senha,
+.confirmarSenha {
+    /*tiro linha, borda e fundo que vem por padrão no html*/
+    background: none;
+    border: 0;
+    outline: 0;
+    font-size: 25px;
+    padding-left: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 90%;
+    margin-top: 10px;
+}
+
+/*mexe na posicao do fundo do botao e no botao*/
+.container-botaoConfirmar {
+    margin-left: 20%;
+    margin-top: 30px;
+    display: block;
+    text-decoration: none;
+}
+
+.botaoConfirmar {
+    position: relative;
+    margin-left: 12.3%;
+    margin-top: 30px;
+    width: 400px;
+    height: 100px;
+    z-index: 2;
+    background-color: rgb(145, 151, 165);
+}
+
+.botaoFundoConfirmar {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 105px;
+    width: 400px;
+    height: 100px;
+    z-index: 1;
+    background-color: rgba(44, 44, 44, 0.747);
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.5);
+}
+
+.confirmar {
+    font-family: cursive;
+    color: rgb(26, 39, 63);
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+/*quando o mouse encosta, o "primeiro" retangulo fica mais escuro e o cursor muda*/
+.container-botaoConfirmar:hover {
+    filter: brightness(0.5);
+    cursor: pointer;
+}
+
+/*pessoa no fundo do cadastro*/
+.iconPessoa img {
+    position: absolute;
+    margin-left: 202px;
+    z-index: -1;
+    margin-top: -386px;
+    height: 500px;
+    width: 500px;
+    filter: opacity(50%);
+}
+
+
+/*todo o footer*/
+.rodape {
+    height: 120px;
+    background-image: url('footer\(calmAura\).PNG');
+    padding: 35px;
+
+}
+
+.endereco {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(20, 20, 20, 0.781);
+
+}
+
+.rodapeVERSAO {
+    font-size: medium;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.849);
+}
+
+.rodapeTERMOS {
+    font-size: medium;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.849);
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.849);
+}
+
+.empresa {
+    color: rgba(0, 0, 0, 0.849);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrinho</title>
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+
+<body>
+    <!-- essa div armazena o input e o botão-->
+    <div class="caixaPesquisa">
+        <!-- placeholder: "informação final" sendo mostrada, no caso, quando abre o icon, aparece "pesquisar..." como informação final-->
+        <input type="texto" class="textoPesquisa" placeholder="Pesquisar...">
+        <!-- colocando o botão dentro da tag <a>-->
+        <!-- tag <a> recebe links-->
+        <a class="botaoPesquisa">
+            <img src="loupe-white.svg" alt="lupa" height="25px" width="25px">
+        </a>
+    </div>
+
+    <!--fundo p não ficar espaçamento-->
+    <header>
+        <div class="fundo">
+            <!--imagem calmAura-->
+            <img class="headerImagem" src="logo(calmAura).PNG" alt="marca">
+        </div>
+
+        <!-- agrupa uma lista de links p outras partes do site-->
+        <nav>
+            <ul>
+                <li><a href="início.html">INÍCIO</a></li>
+                <li><a href="sobrenós.html">SOBRE NÓS</a></li>
+                <li><a href="#">CATEGORIAS</a>
+                    <!--submenu para categoria-->
+                    <ul class="dropCategoria">
+                        <li><a href="#">Kits </a></li>
+                        <li><a href="#">Colchão</a></li>
+                        <li><a href="#">Travesseiro</a></li>
+                        <li><a href="#">Lençol</a></li>
+                        <li><a href="#">Fronha</a></li>
+                        <li><a href="#">Cobertor</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">NECESSIDADES</a>
+                    <!--submenu para necessidades-->
+                    <ul class="dropNecessidades">
+                        <li><a href="#">Coluna e Pescoço</a></li>
+                        <li><a href="#">Alergia</a></li>
+                        <li><a href="#">Insônia</a></li>
+                        <li><a href="#">Calor</a></li>
+                    </ul>
+                </li>
+                <li><a href="lançamentos.html">LANÇAMENTOS</a></li>
+                <li><a href="ofertas.html">OFERTAS</a></li>
+            </ul>
+        </nav>
+
+        <!-- icons no menu-->
+        <!--icons do lado esquerdo do menu-->
+        <div class="icons-esquerdo">
+            <a href="https://www.instagram.com/calmAuraOficial"> <img class="iconIG" src="instagram(calmAura).PNG"
+                    alt="iconIG"></a>
+            <a href="mailto:calmAura.loja@gmail.com"> <img class="iconGMAIL" src="gmail(calmAura).PNG"
+                    alt="iconGMAIL"></a>
+        </div>
+
+        <!--icons do lado direito do menu-->
+        <div class="icons-direito">
+            <a href="carrinho.html"> <img class="iconCarrinho" src="carrinho(calmAura).PNG" alt="iconcompra"></a>
+            <a href="conta.html"><img class="iconConta" src="conta(calmAura).PNG" alt="iconAcc"></a>
+        </div>
+    </header>
+
+    <!--fundo onde fica os produtos dentro do carrinho-->
+    <div class="container">
+        <!--1-->
+        <div class="coluna">
+        </div>
+
+        <!--2-->
+        <div class="coluna">
+        </div>
+
+        <!--3-->
+        <div class="coluna">
+        </div>
+        <!--4-->
+        <div class="coluna">
+        </div>
+    </div>
+
+    <!--footer que seria p/ consultar cep, cupom, total e finalizar compra-->
+    <footer class="fundoTotal">
+        <div class="total">
+            <h3>TOTAL:</h3>
+        </div>
+
+        <div class="real">
+            <p> R$</p>
+        </div>
+
+        <!--foi separado a parte inteira da decimal por motivos de design-->
+        <div class="calculoFinal">
+            <span class="parte-inteira">00000</span>
+            <span class="virgula">,</span>
+            <span class="parte-decimal">00</span>
+        </div>
+
+        <!--botao p/ finalizar a compra-->
+        <div class="quadrado">
+            <div class="carrinhoPNG"> <img src="carrinhoRecortado(calmAura).png" alt=""></div>
+            <div class="finalizarCompra">
+                <p>Finalizar
+                    <br> compra
+                </p>
+            </div>
+        </div>
+        </div>
+
+        <!--os inputs de cupom e CEP-->
+        <div class="container-consulta">
+            <!-- placeholder: "informação final" sendo mostrada, no caso, aparece "Digite seu cupom" como informação final-->
+            <!--input do cupom-->
+            <input type="texto" class="textoCupom" placeholder="Digite seu cupom">
+        </div>
+
+        <div class="container-consulta">
+            <!--input do CEP-->
+            <input type="number" class="textoCEP" placeholder="Informe seu CEP">
+        </div>
+    </footer>
+
+    <!--javascript "linkado"-->
+    <script src="carrinho.js"></script>
+
+</body>
+
+</html>

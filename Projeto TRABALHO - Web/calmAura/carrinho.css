@@ -1,0 +1,319 @@
+* {
+    /* por padrao no html vem com preenchimentop e margem própria, então zeramos*/
+    /* padding fica perto do conteúdo que estamos add na nossa página*/
+    padding: 0;
+    /* margem dos 4 cantos */
+    margin: 0;
+}
+
+body {
+    background-color: rgb(232, 237, 241);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.caixaPesquisa {
+    /*position absolute faz com que o elemento possa estar em qualquer lugar da tela*/
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 50px;
+    /*permite um fácil alinhamento dos elementos*/
+    display: flex;
+    /*to justificando que tem que ficar os elementos totalmente p esquerda de um lado e totalmente na direita do outro lado, "espaçamento entre os elementos"*/
+    justify-content: space-between;
+    /*alinho todos os elementos no centro da minha caixa branca de pesquisa*/
+    align-items: center;
+}
+
+.textoPesquisa {
+    /*tiro linha, borda e fundo que vem por padrão no html*/
+    background: none;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    padding-left: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 320px;
+}
+
+.botaoPesquisa {
+    /*deixou redondinho o botão, pois tava achatado*/
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(40, 81, 104, 0.829);
+    /*deixei o icon da lupa bem centralizado no meio do fundo branco arredondado*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*fundo em baixo da imagem da calmAura pra não ficar espaçado entre o menu e a imagem calmAura*/
+.fundo {
+    background-color: rgba(106, 173, 175, 0.582);
+}
+
+/*imagem da calmAura que eu tentei fazer responsiva*/
+.headerImagem {
+    width: 100%;
+    /*tá trocando o tamanho da altura de forma proporcional*/
+    /*única parte do site que trabalha com responsividade*/
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+/*menu todo*/
+nav {
+    /*coloca a mesma fonte de escrita desde o menu até o submenu*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*estiliza as opcoes do menu*/
+ul {
+    /*a coluna do menu*/
+    background-color: rgba(106, 173, 175, 0.582);
+    /*opcoes alinhadas na coluna do menu*/
+    text-align: center;
+}
+
+/*vai estilizar do meu menu até o submenu*/
+ul li {
+    /*pra não ficar as opções do menu um em baixo do outro e sim um do lado do outro*/
+    display: inline-block;
+    /*pro meu submenu ocupar só o espaço da opção, e não de todas as opções*/
+    /*opcao==categoria, o submenu deve respeitar o espaço da categoria*/
+    position: relative;
+}
+
+/*estiliza o menu e o submenu*/
+ul li a {
+    /*cada opcao vai ocupar toda a largura disponível da coluna*/
+    display: block;
+    padding: 25px 25px;
+    color: rgb(40, 81, 104);
+    /*pra nao ficar com o traco do link por ser tag <a>*/
+    text-decoration: none;
+    font-size: 35px;
+}
+
+/*estilizando o submenu com as linhas divisórias de cada opção*/
+ul li ul.dropCategoria li,
+ul li ul.dropNecessidades li {
+    display: block;
+    border-top: 1px solid rgba(31, 81, 105, 0.856);
+}
+
+/*estilo pros submenus*/
+ul li ul.dropCategoria,
+ul li ul.dropNecessidades {
+    width: 100%;
+    background-color: rgba(186, 219, 219, 0.897);
+    position: absolute;
+    /*z-index pra conseguir olhar as opcoes inteiras do submenu, pois a posiçao dele fica acima de todos os elementos da página*/
+    z-index: 999;
+    display: none;
+}
+
+/*quando o mouse passa as letrinhas ficam mais clarinhas e o cursor */
+ul li a:hover {
+    color: rgba(40, 81, 104, 0.692);
+    cursor: pointer;
+}
+
+/*mostra os submenus quando o mouse passa sobre os itens de lista pai (categoria e necessidades) */
+ul li:hover ul.dropCategoria,
+ul li:hover ul.dropNecessidades {
+    display: block;
+}
+
+/*icons no menu*/
+/*muda a posicao dos icons do lado esquerdo*/
+.icons-esquerdo {
+    position: absolute;
+    margin-top: -4.2%;
+    left: 3.5%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/*muda a posicao dos icons do lado direito*/
+.icons-direito {
+    position: absolute;
+    margin-top: -4.2%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/*ajusta o tamanho deles e o formato p ficar bem redondinho*/
+.iconIG,
+.iconGMAIL,
+.iconCarrinho,
+.iconConta {
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+}
+
+/*quando passa o mouse o cursor muda e fica mais escuro o icon*/
+.iconIG:hover,
+.iconGMAIL:hover,
+.iconCarrinho:hover,
+.iconConta:hover {
+    filter: brightness(0.5);
+    cursor: pointer;
+}
+
+/*espaço onde fica os produtos, tendo 4 colunas*/
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: -60px;
+}
+
+/*estiliza as colunas separadamente*/
+.coluna {
+    background-color: whitesmoke;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+}
+
+/*cor do footer*/
+.fundoTotal {
+    position: absolute;
+    background-color: rgba(66, 94, 153, 0.363);
+    width: 100%;
+}
+
+/*estilizando os meus 2 balaozinhos do cupom e CEP*/
+.container-consulta {
+    position: relative;
+    background-color: whitesmoke;
+    height: 35px;
+    width: 550px;
+    margin-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    /*permite um fácil alinhamento dos elementos*/
+    display: flex;
+    flex-direction: column;
+    /*alinho todos os elementos no centro da minha caixa branca de pesquisa*/
+    align-items: baseline;
+}
+
+/*estilizo o interior dos balaozinho do cupom e CEP*/
+.textoCupom,
+.textoCEP {
+    /*tiro linha, borda e fundo que vem por padrão no html*/
+    background: none;
+    border: 0;
+    outline: 0;
+    font-size: 25px;
+    padding-left: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 50%;
+}
+
+/*remove a seta do input number*/
+.textoCEP::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/*titulo do total*/
+.total h3 {
+    position: absolute;
+    margin-left: 1340px;
+    top: 100px;
+    color: rgb(26, 39, 63);
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*simbolo do real*/
+.real p {
+    position: absolute;
+    margin-left: 1485px;
+    top: 115px;
+    color: rgb(26, 39, 63);
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+/*mexe na posicao dos 2 balaozinhos e a virgula*/
+.calculoFinal {
+    position: absolute;
+    margin-left: 1515px;
+    top: 100px;
+    margin-bottom: 110px;
+    display: flex;
+    align-items: center;
+}
+
+/*mexe no tamanho dos balaozinho, no distanciamento*/
+.parte-inteira,
+.parte-decimal,
+.virgula {
+    padding: 5px;
+}
+
+/*estilizo os balaozinhos*/
+.parte-inteira,
+.parte-decimal {
+    background-color: rgba(128, 128, 128, 0.39);
+    /*arredondando todos os lados*/
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+/*estilizo os ZEROS*/
+.calculoFinal span {
+    font-size: 30px;
+    color: rgb(26, 39, 63);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*parte toda agora focada p fazer o botao de finalizar compra*/
+.carrinhoPNG img {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 65px;
+    height: 65px;
+}
+
+.finalizarCompra p {
+    color: rgb(26, 39, 63);
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.quadrado {
+    position: absolute;
+    margin-left: 1860px;
+    top: 20px;
+    width: 120px;
+    height: 140px;
+    background-color: rgba(128, 128, 128, 0.342);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+/*quando encosto no quadrado de finalizar compra fica cinza e o cursor muda*/
+.quadrado:hover {
+    filter: brightness(0.5);
+    cursor: pointer;
+}

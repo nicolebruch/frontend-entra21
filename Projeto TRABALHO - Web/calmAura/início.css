@@ -1,0 +1,495 @@
+* {
+    /* por padrao no html vem com preenchimentop e margem própria, então zeramos*/
+    /* padding fica perto do conteúdo que estamos add na nossa página*/
+    padding: 0;
+    /* margem dos 4 cantos */
+    margin: 0;
+}
+
+body {
+    background-color: rgb(232, 237, 241);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.caixaPesquisa {
+    /*position absolute faz com que o elemento possa estar em qualquer lugar da tela*/
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 50px;
+    /*permite um fácil alinhamento dos elementos*/
+    display: flex;
+    /*to justificando que tem que ficar os elementos totalmente p esquerda de um lado e totalmente na direita do outro lado, "espaçamento entre os elementos"*/
+    justify-content: space-between;
+    /*alinho todos os elementos no centro da minha caixa branca de pesquisa*/
+    align-items: center;
+}
+
+.textoPesquisa {
+    /*tiro linha, borda e fundo que vem por padrão no html*/
+    background: none;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    padding-left: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 320px;
+}
+
+.botaoPesquisa {
+    /*deixou redondinho o botão, pois tava achatado*/
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(40, 81, 104, 0.829);
+    /*deixei o icon da lupa bem centralizado no meio do fundo branco arredondado*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*fundo em baixo da imagem da calmAura pra não ficar espaçado entre o menu e a imagem calmAura*/
+.fundo {
+    background-color: rgba(106, 173, 175, 0.582);
+}
+
+/*imagem da calmAura que eu tentei fazer responsiva*/
+.headerImagem {
+    width: 100%;
+    /*tá trocando o tamanho da altura de forma proporcional*/
+    /*única parte do site que trabalha com responsividade*/
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+/*menu todo*/
+nav {
+    /*coloca a mesma fonte de escrita desde o menu até o submenu*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*estiliza as opcoes do menu*/
+ul {
+    /*a coluna do menu*/
+    background-color: rgba(106, 173, 175, 0.582);
+    /*opcoes alinhadas na coluna do menu*/
+    text-align: center;
+}
+
+/*vai estilizar do meu menu até o submenu*/
+ul li {
+    /*pra não ficar as opções do menu um em baixo do outro e sim um do lado do outro*/
+    display: inline-block;
+    /*pro meu submenu ocupar só o espaço da opção, e não de todas as opções*/
+    /*opcao==categoria, o submenu deve respeitar o espaço da categoria*/
+    position: relative;
+}
+
+/*estiliza o menu e o submenu*/
+ul li a {
+    /*cada opcao vai ocupar toda a largura disponível da coluna*/
+    display: block;
+    padding: 25px 25px;
+    color: rgb(40, 81, 104);
+    /*pra nao ficar com o traco do link por ser tag <a>*/
+    text-decoration: none;
+    font-size: 35px;
+}
+
+/*estilizando o submenu com as linhas divisórias de cada opção*/
+ul li ul.dropCategoria li,
+ul li ul.dropNecessidades li {
+    display: block;
+    border-top: 1px solid rgba(31, 81, 105, 0.856);
+}
+
+/*estilo pros submenus*/
+ul li ul.dropCategoria,
+ul li ul.dropNecessidades {
+    width: 100%;
+    background-color: rgba(186, 219, 219, 0.897);
+    position: absolute;
+    /*z-index pra conseguir olhar as opcoes inteiras do submenu, pois a posiçao dele fica acima de todos os elementos da página*/
+    z-index: 999;
+    display: none;
+}
+
+/*quando o mouse passa as letrinhas ficam mais clarinhas e o cursor */
+ul li a:hover {
+    color: rgba(40, 81, 104, 0.692);
+    cursor: pointer;
+}
+
+/*mostra os submenus quando o mouse passa sobre os itens de lista pai (categoria e necessidades) */
+ul li:hover ul.dropCategoria,
+ul li:hover ul.dropNecessidades {
+    display: block;
+}
+
+/*icons no menu*/
+/*muda a posicao dos icons do lado esquerdo*/
+.icons-esquerdo {
+    position: absolute;
+    margin-top: -4.2%;
+    left: 3.5%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/*muda a posicao dos icons do lado direito*/
+.icons-direito {
+    position: absolute;
+    margin-top: -4.2%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/*ajusta o tamanho deles e o formato p ficar bem redondinho*/
+.iconIG,
+.iconGMAIL,
+.iconCarrinho,
+.iconConta {
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+}
+
+/*quando passa o mouse o cursor muda e fica mais escuro o icon*/
+.iconIG:hover,
+.iconGMAIL:hover,
+.iconCarrinho:hover,
+.iconConta:hover {
+    filter: brightness(0.5);
+    cursor: pointer;
+}
+
+/*título dos mais vendidos*/
+.maisVendidos {
+    width: 100%;
+}
+
+/*produtos mais vendidos*/
+.container {
+    max-width: 1500px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*estilizando os cards*/
+.card-kit,
+.card1,
+.card3,
+.card4 {
+    position: relative;
+    background-color: rgba(96, 161, 163, 0.719);
+    border: 1px solid #ddd;
+    border-radius: 15%;
+    overflow: hidden;
+    width: 310px;
+    margin: 20px;
+    transition: filter 0.3s;
+}
+
+/*se encosta, fica mais escuro o card*/
+.card-kit:hover,
+.card1:hover,
+.card3:hover,
+.card4:hover {
+    filter: brightness(0.6);
+}
+
+.card-kit img,
+.card1 img,
+.card3 img,
+.card4 img {
+    width: 100%;
+    transition: filter 0.3s;
+}
+
+/*quando encosta a imagem do produto tambem fica escura*/
+.card-kit:hover img,
+.card1:hover img,
+.card3:hover img,
+.card4:hover img {
+    filter: brightness(1.2);
+}
+
+/*titulo do produto*/
+.card-kit h4,
+.card1 h4,
+.card3 h4,
+.card4 h4 {
+    text-align: center;
+    margin: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff;
+    font-size: larger;
+}
+
+.card-kit p,
+.card1 p,
+.card3 p,
+.card4 p {
+    margin-left: 30px;
+    color: rgb(23, 52, 70);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: larger;
+}
+
+/*posicao dos 3 produtos do lado do kit*/
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 55px;
+    margin-right: 30px;
+    transition: filter 0.3s;
+}
+
+/*estilizando os 3 produtos do lado do kit*/
+.cardzinho {
+    background-color: rgba(96, 161, 163, 0.719);
+    border: 1px solid #ddd;
+    border-radius: 30%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+}
+
+.cardzinho img {
+    width: 80px;
+    height: 80px;
+    margin-top: 9px;
+    margin-left: 9px;
+    border-radius: 30%;
+    transition: filter 0.3s;
+}
+
+/*vai escurecer os 3 produtos do lado do kit quando o mouse passar no card do kit*/
+.card-kit:hover+.card-container {
+    filter: brightness(0.6);
+}
+
+/*icons dos carrinhos*/
+.iconCarrinhoProduto1,
+.iconCarrinhoProduto2,
+.iconCarrinhoProduto3,
+.iconCarrinhoProduto4 {
+    position: absolute;
+    margin-left: 210px;
+}
+
+.iconCarrinhoProduto1 {
+    margin-top: -50px;
+}
+
+.iconCarrinhoProduto2 {
+    margin-top: -50px;
+}
+
+.iconCarrinhoProduto3 {
+    margin-top: -80px;
+}
+
+.iconCarrinhoProduto4 {
+    margin-top: -70px;
+
+}
+
+
+.iconCarrinhoProduto1 img,
+.iconCarrinhoProduto2 img,
+.iconCarrinhoProduto3 img,
+.iconCarrinhoProduto4 img {
+    width: 50px;
+    height: 50px;
+    filter: opacity(70%);
+}
+
+.iconCarrinhoProduto1:hover,
+.iconCarrinhoProduto2:hover,
+.iconCarrinhoProduto3:hover,
+.iconCarrinhoProduto4:hover {
+    filter: opacity(60%);
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+}
+
+/*carrossel*/
+.slider {
+    margin: 0 auto;
+    width: 100%;
+    height: 750px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 1000px;
+    /*botao ficou um do lado do outro*/
+    display: flex;
+}
+
+.slides input {
+    display: none;
+
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+
+}
+
+/*botoes*/
+.navegacaoManual {
+    position: absolute;
+    width: 100%;
+    margin-top: -300px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-botao {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+/*aplico a separação em todos os botões, menos no último*/
+.manual-botao:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-botao:hover {
+    background-color: white;
+}
+
+/*manipulando meus radios*/
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -25%;
+}
+
+#radio3:checked~.first {
+    margin-left: -50%;
+}
+
+.navegacaoAuto div {
+    border: 2px solid rgb(40, 81, 104);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navegacaoAuto {
+    position: absolute;
+    width: 100%;
+    margin-top: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.navegacaoAuto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+/*fica branco a bolinha com a propaganda que tá passando*/
+#radio1:checked~.navegacaoAuto .auto-botao1 {
+    background-color: white;
+}
+
+#radio2:checked~.navegacaoAuto .auto-botao2 {
+    background-color: white;
+}
+
+#radio3:checked~.navegacaoAuto .auto-botao3 {
+    background-color: white;
+}
+
+.tituloTamanho {
+    margin-left: 50px;
+}
+
+/*parte de comprar por tamanho*/
+.camas {
+    margin-left: 20%;
+}
+
+/*estilizando as imagens*/
+.solteiro,
+.casal,
+.queen,
+.king {
+    border-radius: 5%;
+    margin-right: 50px;
+}
+
+/*quando o mouse encosta fica escuro*/
+.solteiro:hover,
+.casal:hover,
+.queen:hover,
+.king:hover {
+    cursor: pointer;
+    filter: brightness(0.5);
+}
+
+/*todo o footer*/
+.rodape {
+    height: 120px;
+    background-image: url('footer\(calmAura\).PNG');
+    padding: 35px;
+
+}
+
+.endereco {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(20, 20, 20, 0.781);
+
+}
+
+.rodapeVERSAO {
+    font-size: medium;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.849);
+}
+
+.rodapeTERMOS {
+    font-size: medium;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.849);
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.849);
+}
+
+.empresa {
+    color: rgba(0, 0, 0, 0.849);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+
+}
